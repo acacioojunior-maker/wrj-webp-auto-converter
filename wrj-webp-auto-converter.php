@@ -2,13 +2,31 @@
 /**
  * Plugin Name: WRJ WebP Auto Converter
  * Description: Converte uploads JPG/PNG para WebP com inteligência de contexto. Produtos: 2 MP, quadrados, leves e nítidos para público exigente. Protege contra bombas de descompressão e dá "NÃO" claro ao operador.
- * Version:     1.4.0
+ * Version:     1.5.0
  * Author:      WRJ
  * License:     GPL-2.0-or-later
  */
 
 if (!defined('ABSPATH')) {
     exit; // Sem acesso direto
+}
+
+/* ----------------------------------------------------------------------------
+ * Atualizações automáticas via GitHub (Plugin Update Checker)
+ *
+ * Checa os Releases publicados em github.com/acacioojunior-maker/...
+ * e mostra "atualização disponível" no painel, como um plugin do diretório.
+ * ------------------------------------------------------------------------- */
+
+$wrj_webp_puc_loader = plugin_dir_path(__FILE__) . 'plugin-update-checker/plugin-update-checker.php';
+if (file_exists($wrj_webp_puc_loader)) {
+    require $wrj_webp_puc_loader;
+
+    $wrj_webp_update_checker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+        'https://github.com/acacioojunior-maker/wrj-webp-auto-converter/',
+        __FILE__,
+        'wrj-webp-auto-converter'
+    );
 }
 
 /* ----------------------------------------------------------------------------

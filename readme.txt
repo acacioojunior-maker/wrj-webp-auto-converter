@@ -4,7 +4,7 @@ Tags: webp, otimização de imagem, performance, woocommerce, upload
 Requires at least: 5.8
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.4.0
+Stable tag: 1.5.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,6 +90,9 @@ define( 'WRJ_WEBP_DELETE_ORIGINAL',      true ); // false = move para backup
 `
 
 == Changelog ==
+
+= 1.5.0 =
+* Adicionada atualização automática via GitHub Releases (biblioteca Plugin Update Checker). O painel passa a avisar e atualizar com um clique a cada novo Release publicado.
 
 = 1.4.0 =
 * Adicionado aviso no painel (admin notice) quando o servidor não tem suporte a WebP na GD (`imagewebp` ausente), deixando claro que a conversão está inativa.
