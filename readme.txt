@@ -1,5 +1,5 @@
 === WRJ WebP Auto Converter ===
-Contributors: wrj
+Contributors: acacioojunior-maker
 Tags: webp, otimização de imagem, performance, woocommerce, upload
 Requires at least: 5.8
 Tested up to: 6.5
