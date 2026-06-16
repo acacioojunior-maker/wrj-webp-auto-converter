@@ -1,0 +1,25 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+
+# Dependências / build (caso venha a usar)
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
+
+# Logs e temporários
+*.log
+*.tmp
+
+# Pacotes de distribuição
+*.zip
+/dist/
