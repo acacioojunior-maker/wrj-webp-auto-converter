@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WRJ WebP Auto Converter
  * Description: Converte uploads JPG/PNG para WebP com inteligência de contexto. Produtos: 2 MP, quadrados, leves e nítidos para público exigente. Protege contra bombas de descompressão e dá "NÃO" claro ao operador.
- * Version:     1.3.0
+ * Version:     1.4.0
  * Author:      WRJ
  * License:     GPL-2.0-or-later
  */
@@ -64,6 +64,29 @@ add_filter('upload_mimes', function ($mimes) {
     $mimes['webp'] = 'image/webp';
     return $mimes;
 });
+
+/* ----------------------------------------------------------------------------
+ * Aviso no painel se o servidor não suportar WebP (GD sem imagewebp)
+ * ------------------------------------------------------------------------- */
+
+add_action('admin_notices', 'wrj_webp_admin_notice_support');
+
+function wrj_webp_admin_notice_support() {
+    if (function_exists('imagewebp')) {
+        return; // Servidor OK, nada a avisar
+    }
+
+    // Só mostra a quem pode mexer em plugins
+    if (!current_user_can('activate_plugins')) {
+        return;
+    }
+
+    echo '<div class="notice notice-warning"><p><strong>WRJ WebP Auto Converter:</strong> '
+        . 'este servidor não tem suporte a WebP na extensão GD do PHP (função <code>imagewebp</code> ausente). '
+        . 'A conversão está <strong>inativa</strong> — os uploads continuam funcionando no formato original, sem otimização. '
+        . 'Peça à sua hospedagem para habilitar o suporte a WebP na GD.'
+        . '</p></div>';
+}
 
 /* ----------------------------------------------------------------------------
  * Resolve o PERFIL de processamento conforme o contexto do upload
