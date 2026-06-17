@@ -4,7 +4,7 @@ Tags: webp, otimização de imagem, performance, woocommerce, upload
 Requires at least: 5.8
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,6 +90,9 @@ define( 'WRJ_WEBP_DELETE_ORIGINAL',      true ); // false = move para backup
 `
 
 == Changelog ==
+
+= 1.5.1 =
+* Adicionados os campos "Requires at least" (WP 5.8) e "Requires PHP" (7.4) ao cabeçalho do plugin, para que os requisitos apareçam no instalador do WordPress.
 
 = 1.5.0 =
 * Adicionada atualização automática via GitHub Releases (biblioteca Plugin Update Checker). O painel passa a avisar e atualizar com um clique a cada novo Release publicado.

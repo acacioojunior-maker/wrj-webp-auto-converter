@@ -2,9 +2,11 @@
 /**
  * Plugin Name: WRJ WebP Auto Converter
  * Description: Converte uploads JPG/PNG para WebP com inteligência de contexto. Produtos: 2 MP, quadrados, leves e nítidos para público exigente. Protege contra bombas de descompressão e dá "NÃO" claro ao operador.
- * Version:     1.5.0
- * Author:      WRJ
- * License:     GPL-2.0-or-later
+ * Version:           1.5.1
+ * Author:            WRJ
+ * Requires at least: 5.8
+ * Requires PHP:      7.4
+ * License:           GPL-2.0-or-later
  */
 
 if (!defined('ABSPATH')) {
